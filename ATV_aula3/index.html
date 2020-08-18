@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Formulário HTML</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body background-color = "gray">
+    <div width=60% align=center>
+    <form class="formulario" method="post" action="ticket.php" align=left> 
+        <p> Ticked Vendor</p>
+        
+        <div class="field">
+            <label for="nome">Valor pago:</label>
+            <input type="float" id="valor" name="valor" placeholder="Valor*" required>
+        </div>
+              
+        <div class="field radiobox">
+            <span>Tipo do bilhete:</span>
+            <input type="radio" name="bilhete" id="sim" value="1" checked><label for="sim">Unitário</label>
+            <input type="radio" name="bilhete" id="nao" value="2"><label for="nao">Duplo</label>
+            <input type="radio" name="bilhete" id="nao" value="3"><label for="nao">10 Viagens</label>
+        </div>
+ 
+        <input type="submit" name="mensagens" value="Enviar">
+    </form>
+</div>
+</body>
+</html>
