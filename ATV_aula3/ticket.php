@@ -20,11 +20,6 @@
 	
 	<?php
 
-		// Entrada de dados (formulario HTML, JS)
-		// Com 2 arquivos, sendo: 
-		// 1 - Metodo de Envio (formulario.html)
-		// 2 - Metodo de Recebimento (mensagem.php)
-
 		$valor = $_POST['valor'];
 		$bilhete = $_POST['bilhete'];
         $troco = 0;
@@ -46,11 +41,14 @@
             $troco = 0;
         } else {
             do(
-                $quantidade = ($quantidade + 1);
+                $quantidade++;
                 $valor = ($valor - $x);
             )while($valor > 0);
+            
+            $troco = $valor;
         }
-	
+        
+
         echo '<td>'.$valor.'</td>
 			  <td>'.$bilhetes.'</td>
 			  <td>'.$quantidade.'</td>        
