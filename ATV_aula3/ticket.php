@@ -22,7 +22,7 @@
 
 		$valor = $_POST['valor'];
 		$bilhete = $_POST['bilhete'];
-        $troco = 0;
+        $troco = $valor;
 		$quantidade = 0;
         
         if($bilhete == 1){
@@ -36,16 +36,15 @@
             $x = 10;
         }
 
-        if($valor < 1.30){
+        if($valor < $x){
             $quantidade = 'Valor Insuficiente';
             $troco = 0;
         } else {
-            do(
+            do{
                 $quantidade++;
-                $valor = ($valor - $x);
-            )while($valor > 0);
+                $troco = ($troco - $x);
+            }while($troco > $x);
             
-            $troco = $valor;
         }
         
 
